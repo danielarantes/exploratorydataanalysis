@@ -20,20 +20,6 @@ system(paste("grep '^[12]/2/2007'", filename, " >> ", temp))
 # reads the file
 df<-read.csv(temp, sep=';', header=T)
 
-# loads the first file
-#data <- read.table(unz(temp, files$Name[1]), sep=';', header=T)
-
-
-
-lines2007<-grep('^../../2007',readLines(unz('project1/data/exdatadatahousehold_power_consumption.zip', 'household_power_consumption.txt')), value=T)
-
-# gives a lengthy warning
-dt<-fread('project1/data/household_power_consumption.txt', sep=';', verbose=T)
-dt<-fread('project1/data/household_power_consumption.txt', sep=';', na.strings=c('?'), verbose=T)
-
-
-
-
 par(mfrow=c(1,1))
 # plot 1 draft
 df<-read.csv('project1/data/household_power_consumption.txt', sep=';', header=T)
